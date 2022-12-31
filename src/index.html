@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Given the screen size and an aspect ratio, give me numbers i can reason with" />
+	<meta name="keywords" content="calculator, screen-size" />
+
+	<title>Usable screen sizes</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="mt-4 p-4 border border-2 rounded-3 bg-info-subtle vw-100 text-center">
+		<h1><strong>Usable screen sizes</strong></h1>
+	</div>
+	<main class="container align-content-center mt-4">
+
+		<label class="form-label">Size</label>
+		<div class="row mb-3">
+			<div class="col">
+				<input id="in-d-inches" type="number" class="form-control form-control-lg" placeholder="22" value="24"
+					onchange="on_valueschange()" />
+			</div>
+			<label class="col text-nowrap col-form-label text-muted">" (inches)</label>
+		</div>
+
+		<label class="form-label">Aspect Ratio</label>
+		<div class="row mb-3 row-cols-auto">
+			<div class="col col-sm">
+				<input id="in-ratio-w" type="number" class="form-control form-control-sm" value="16"
+					onchange="on_valueschange()" />
+			</div>
+			<label class="form-label">:</label>
+			<div class="col col-sm">
+				<input id="in-ratio-h" type="number" class="form-control form-control-sm" value="9"
+					onchange="on_valueschange()" />
+			</div>
+			<label class="col text-nowrap col-form-label text-muted">W:H</label>
+		</div>
+
+		<label class="form-label col-form-label-lg">Dimensions</label>
+		<div class="row mb-3 row-cols-auto">
+			<div class="col col-sm">
+				<input id="out-size-w-cm" type="number" class="form-control form-control-lg" placeholder="122" />
+			</div>
+			<label class="form-label col-form-label-lg">x</label>
+			<div class="col col-sm">
+				<input id="out-size-h-cm" type="number" class="form-control form-control-lg" placeholder="69" />
+			</div>
+			<label class="col text-nowrap col-form-label text-muted font-monospace">cm</label>
+		</div>
+		<div class="row mb-3 row-cols-auto">
+			<div class="col col-sm">
+				<input id="out-size-w-in" type="number" class="form-control form-control-lg" placeholder="48" />
+			</div>
+			<label class="form-label col-form-label-lg">x</label>
+			<div class="col col-sm">
+				<input id="out-size-h-in" type="number" class="form-control form-control-lg" placeholder="27" />
+			</div>
+			<label class="col text-nowrap col-form-label text-muted font-monospace">in</label>
+		</div>
+
+	</main>
+</body>
+
+</html>
