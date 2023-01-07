@@ -1,4 +1,4 @@
-const INCH_TO_CM_K = 2.35
+const INCH_TO_CM_K = 2.54
 
 
 function on_valueschange()
