@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
 
 <head>
 	<meta charset="utf-8">
@@ -16,57 +16,82 @@
 </head>
 
 <body>
-	<div class="mt-4 p-4 border border-2 rounded-3 bg-info-subtle vw-100 text-center">
+
+	<header class="mb-4 p-4 border-bottom border-2 bg-info-subtle vw-100 text-center">
 		<h1><strong>Usable screen sizes</strong></h1>
-	</div>
+	</header>
+
 	<main class="container align-content-center mt-4">
 
-		<label class="form-label">Size</label>
+		<!-- size -->
+		<div class="row row-cols-1">
+			<label class="form-label col-form-label-lg">
+				Size <span class="text-nowrap text-muted">" (inches)</span>
+			</label>
+		</div>
 		<div class="row mb-3">
-			<div class="col">
+			<div class="col col-sm">
 				<input id="in-d-inches" type="number" class="form-control form-control-lg" placeholder="22" value="24"
 					onchange="on_valueschange()" />
 			</div>
-			<label class="col text-nowrap col-form-label text-muted">" (inches)</label>
 		</div>
 
-		<label class="form-label">Aspect Ratio</label>
+		<!-- aspect ratio -->
+		<div class="row row-cols-1">
+			<label class="form-label col-form-label-lg">
+				Aspect Ratio <span class="text-nowrap text-muted">W:H</span>
+			</label>
+		</div>
 		<div class="row mb-3 row-cols-auto">
 			<div class="col col-sm">
 				<input id="in-ratio-w" type="number" class="form-control form-control-sm" value="16"
 					onchange="on_valueschange()" />
 			</div>
-			<label class="form-label">:</label>
+			<label class="col col-form-label-sm form-label">:</label>
 			<div class="col col-sm">
 				<input id="in-ratio-h" type="number" class="form-control form-control-sm" value="9"
 					onchange="on_valueschange()" />
 			</div>
-			<label class="col text-nowrap col-form-label text-muted">W:H</label>
 		</div>
 
-		<label class="form-label col-form-label-lg">Dimensions</label>
+		<!-- dimensions -->
+		<div class="row row-cols-1">
+			<label class="form-label col-form-label-lg">Dimensions</label>
+		</div>
+
+		<div class="row row-cols-1">
+			<label class="col col-form-label-sm text-nowrap text-muted font-monospace">cm</label>
+		</div>
 		<div class="row mb-3 row-cols-auto">
 			<div class="col col-sm">
 				<input id="out-size-w-cm" type="number" class="form-control form-control-lg" placeholder="122" />
 			</div>
-			<label class="form-label col-form-label-lg">x</label>
+			<label class="col col-form-label-lg form-label">x</label>
 			<div class="col col-sm">
 				<input id="out-size-h-cm" type="number" class="form-control form-control-lg" placeholder="69" />
 			</div>
-			<label class="col text-nowrap col-form-label text-muted font-monospace">cm</label>
 		</div>
-		<div class="row mb-3 row-cols-auto">
+
+		<div class="row row-cols-1">
+			<label class="col col-form-label-sm text-nowrap text-muted font-monospace">inches</label>
+		</div>
+		<div class="row mb-4 row-cols-auto">
 			<div class="col col-sm">
 				<input id="out-size-w-in" type="number" class="form-control form-control-lg" placeholder="48" />
 			</div>
-			<label class="form-label col-form-label-lg">x</label>
+			<label class="col col-form-label-lg form-label">x</label>
 			<div class="col col-sm">
 				<input id="out-size-h-in" type="number" class="form-control form-control-lg" placeholder="27" />
 			</div>
-			<label class="col text-nowrap col-form-label text-muted font-monospace">in</label>
 		</div>
 
 	</main>
+
+	<footer class="container-fluid justify-content-between align-content-center font-monospace text-muted border-top py-3 my-4 text-center">
+		<a href="https://github.com/JacopoWolf/usable-screen-sizes">
+		<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jacopowolf/usable-screen-sizes?style=social"></a>
+	</footer>
+
 </body>
 
 </html>
